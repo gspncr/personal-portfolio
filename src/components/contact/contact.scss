@@ -1,0 +1,166 @@
+@import "../../global.scss";
+
+.contact{
+    background-color: white;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+    }
+
+    .left{
+        @include mobile{
+            display:none;
+        }
+        flex: 1;
+        overflow: hidden;
+        span{
+            height: 100%;
+            font-size: 100px;
+            justify-content: center;
+
+        }
+
+        .imgContainer{
+            width: 600px;
+            height: 400px;
+            background-color: #B6B6B8;
+            border-radius: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+
+            @include mobile{
+                display:none;
+                border-radius: 0%;
+            }
+
+            img{
+                width: 90%;
+                border-radius: 10%;
+
+                @include mobile{
+                    display:none;
+                }
+            }
+        }
+    }
+    .right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2{
+            font-size: 35px;
+        }
+        h3{
+            font-size: 25px;
+        }
+        h5{
+            font-size: 15px;
+            @include mobile{
+                display: none;
+            }
+        }
+        h4{
+            font-size: 15px;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+
+            @include mobile{
+                font-size: 20px;
+            }
+
+            span{
+                @include mobile{
+                    display: none;
+                }
+                font-size: inherit;
+                color: #0F838F;
+            }
+            .ityped-cursor {
+                font-size: 1rem;
+                opacity: 1;
+                -webkit-animation: blink 0.3s infinite;
+                -moz-animation: blink 0.3s infinite;
+                animation: blink 0.3s infinite;
+                animation-direction: alternate;
+            }
+             
+            @keyframes blink {
+                50%{
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+             
+            @-webkit-keyframes blink {
+                100% {
+                    opacity: 0;
+                }
+            }
+             
+            @-moz-keyframes blink {
+                100% {
+                    opacity: 0;
+                }
+            }
+
+        }
+
+        form{
+            width: 70%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            input{
+                width: 300px;
+                height: 30px;
+                font-size: 14px;
+
+                @include mobile{
+                    width: 200px;
+                    height: 20px;
+                }
+            }
+            textarea{
+                width: 300px;
+                height: 200px;
+                font-size: 14px;
+
+                @include mobile{
+                    width: 200px;
+                    height: 100px;
+                }
+            }
+            button{
+                width: 150px;
+                height: 30px;
+                color: white;
+                background-color: grey;
+                border: none;
+                border-radius: 10px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:focus{
+                    outline: none;
+                }
+                
+            }
+            span{
+                color: green;
+            }
+        }
+    }
+}
